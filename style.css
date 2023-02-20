@@ -1,0 +1,108 @@
+*{
+  margin: 0;
+  padding: 0;
+box-sizing: border-box;
+}
+.background{
+  height: 100vh;
+  width: 100vw;
+  background: url("images/587674.jpg");
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.background .contain-space {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  overflow: hidden;
+}
+
+.background .contain-space .space {
+  background: rgba(10,10,10,0.8);
+  display: flex;
+}
+
+.background .contain-space .space span {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background-color: #962F44;
+  margin: 0 4px;
+  box-shadow: 0 0 0 10px #962F4444,
+              0 0 50px #962F44,
+              0 0 100px #962F44;
+  border-radius: 50%;
+  animation: animate 15s linear infinite;
+  animation-duration: calc(125s / var(--i));
+}
+
+.background .contain-space .space span:nth-child(even){
+  background-color: #D17060;
+  box-shadow: 0 0 0 10px #D1706044,
+              0 0 50px #D17060,
+              0 0 100px #D17060;
+}
+.background .contain-space .space:nth-child(2) span {
+  background-color: #D0983E;
+  box-shadow: 0 0 0 10px #D0983E44,
+              0 0 50px #D0983E,
+              0 0 100px #D0983E;
+}
+
+.background .contain-space .space:nth-child(2) span:nth-child(even){
+  background-color: #1A332D ;
+  box-shadow: 0 0 0 10px #1A332D44,
+              0 0 50px #1A332D,
+              0 0 100px #1A332D;
+}
+
+.background .contain-space .space:nth-child(3) span {
+  background-color: #296678;
+  box-shadow: 0 0 0 10px #29667844,
+              0 0 50px #296678,
+              0 0 100px #296678;
+}
+
+.background .contain-space .space:nth-child(3) span:nth-child(even){
+  background-color: #87D5B8;
+  box-shadow: 0 0 0 10px #87D5B844,
+              0 0 50px #87D5B8,
+              0 0 100px #87D5B8;
+}
+
+.background .contain-space .space:nth-child(4) span {
+  background-color: #E0F9DD;
+  box-shadow: 0 0 0 10px #E0F9DD44,
+              0 0 50px #E0F9DD,
+              0 0 100px #E0F9DD;
+}
+
+.background .contain-space .space:nth-child(4) span:nth-child(even){
+  background-color: #69A895;
+  box-shadow: 0 0 0 10px #69A89544,
+              0 0 50px #69A895,
+              0 0 100px #69A895;
+}
+
+
+@keyframes animate {
+  0% {
+    transform: translateY(100vh) scale(0);
+  }
+
+  100% {
+    transform: translateY(-10vh) scale(1);
+  }
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+
+}
